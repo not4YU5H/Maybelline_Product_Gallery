@@ -6,12 +6,12 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.maybellineproductgallery.model.Post
 
-@Database(entities = [Post::class] , version = 1 )
+@Database(entities = [Post::class] ,version = 1 )
 abstract class ProductDatabase: RoomDatabase() {
-    abstract fun ProductCrud(): RoomDao
+    abstract fun roomDao(): RoomDao
 
     companion object{
-        @Volatile
+
         private var INSTANCE: ProductDatabase? = null
 
         fun getProductDatabase(context: Context): ProductDatabase {
@@ -23,6 +23,5 @@ abstract class ProductDatabase: RoomDatabase() {
                 return INSTANCE!!
             }
         }
-
     }
 }

@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide
 import com.example.maybellineproductgallery.R
 import com.example.maybellineproductgallery.model.Post
 
-class ProductAdapter : ListAdapter<Post, ProductAdapter.ProductViewHolder>(DiffUtil()) {
+class ProductAdapter : ListAdapter <Post, ProductAdapter.ProductViewHolder>(DiffUtil()) {
 
     class DiffUtil: androidx.recyclerview.widget.DiffUtil.ItemCallback<Post>() {
         override fun areItemsTheSame(oldItem: Post, newItem: Post): Boolean {
@@ -22,9 +22,10 @@ class ProductAdapter : ListAdapter<Post, ProductAdapter.ProductViewHolder>(DiffU
         override fun areContentsTheSame(oldItem: Post, newItem: Post): Boolean {
             return oldItem == newItem
         }
-
     }
-    class ProductViewHolder(view: View): RecyclerView.ViewHolder(view){
+
+
+    class ProductViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val name: TextView = view.findViewById(R.id.name)
         val brand: TextView = view.findViewById(R.id.brand)
         val desc: TextView = view.findViewById(R.id.description)
@@ -34,8 +35,9 @@ class ProductAdapter : ListAdapter<Post, ProductAdapter.ProductViewHolder>(DiffU
         fun bind(post: Post) {
             name.text = post.name
             brand.text = post.brand
-            desc.text = post.description
             price.text = post.price
+            desc.text = post.description
+
             Glide.with(name.context).load(post.image_link).into(imageLink)
         }
     }

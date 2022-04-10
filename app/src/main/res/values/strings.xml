@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Maybelline Product Gallery</string>
+    <string name="image_link">Product Image</string>
+    <string name="name">Product Name</string>
+    <string name="price">Product Price</string>
+    <string name="description">Product Description</string>
+    <string name="dollar">$</string>
+    <string name="brand">Product Brand</string>
 </resources>

@@ -7,9 +7,9 @@ import androidx.room.PrimaryKey
 data class Post(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-    val brand: String,
-    val description: String,
-    val image_link: String,
     val name: String,
+    val brand: String,
+    val image_link: String,
+    val description: String,
     val price: String
 )

@@ -9,9 +9,12 @@ import com.example.maybellineproductgallery.model.Post
 
 @Dao
 interface RoomDao {
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+
+    @Insert
+        (onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertProduct(post: Post)
 
-    @Query("SELECT * FROM ProductTable")
+    @Query
+        ("SELECT * FROM ProductTable")
     fun getProduct(): LiveData<List<Post>>
 }
