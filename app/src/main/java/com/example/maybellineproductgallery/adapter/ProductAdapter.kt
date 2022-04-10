@@ -24,7 +24,6 @@ class ProductAdapter : ListAdapter <Post, ProductAdapter.ProductViewHolder>(Diff
         }
     }
 
-
     class ProductViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val name: TextView = view.findViewById(R.id.name)
         val brand: TextView = view.findViewById(R.id.brand)
